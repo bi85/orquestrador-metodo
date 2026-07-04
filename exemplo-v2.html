@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Método ANCORA — Blueprint Completo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+  window.__blueprint = {
+    "criador": {
+      "nome": "Ana Beatriz Campos",
+      "area": "Gestão Educacional",
+      "anos_experiencia": 12,
+      "bio": "Especialista em liderança pedagógica com 12 anos formando gestores que transformam escolas em organizações de alta performance."
+    },
+    "destino": {
+      "publico": "Diretores e coordenadores pedagógicos de escolas privadas de médio porte",
+      "ponto_a": "Gestor sobrecarregado, apagando incêndios, sem tempo para o pedagógico",
+      "ponto_b": "Líder pedagógico estratégico, com equipe autônoma e resultados mensuráveis"
+    },
+    "identidade": {
+      "nome_oficial": "Método ANCORA",
+      "sigla": "ANCORA",
+      "tagline": "Da sobrecarga à liderança pedagógica estratégica",
+      "frase_autoral": "Você não foi contratado para apagar incêndios. Foi contratado para construir uma escola onde incêndios não acontecem.",
+      "forma_visual": "escada",
+      "forma_descricao": "Quatro degraus representando a ascensão da gestão reativa para a liderança transformadora",
+      "cores": { "primaria": "#1B3A5C", "secundaria": "#2D6A9F", "acento": "#E8744A" }
+    },
+    "caminho": [
+      {
+        "ordem": 1, "nome": "Ancoragem",
+        "descricao": "Mapear o território real: onde a escola está, quem são as pessoas e quais são as urgências verdadeiras.",
+        "fez": "Quando assumi a coordenação, passei os primeiros 30 dias entrando em todas as salas, conversando com cada professor individualmente. Mapeei 47 pontos de tensão antes de propor qualquer mudança.",
+        "faz": "Toda sexta-feira faço um check-in de 15 minutos com cada líder de área para manter o mapa atualizado. Uso um quadro simples: verde/amarelo/vermelho.",
+        "faria": "Crie seu Mapa de Território nos primeiros 21 dias. Anote tudo sem julgar. O território é o que é, não o que você quer que seja.",
+        "ferramenta": "Template: Mapa de Território 21 Dias"
+      },
+      {
+        "ordem": 2, "nome": "Núcleo",
+        "descricao": "Identificar as 3 alavancas pedagógicas que, se movidas, movem tudo o mais.",
+        "fez": "Descobri que 80% dos conflitos na escola vinham de 3 professores. Em vez de resolver 47 problemas, trabalhei o núcleo. Em 60 dias o clima havia mudado.",
+        "faz": "Antes de qualquer reunião de equipe, pergunto: 'Se resolvermos só uma coisa hoje, qual move mais?' Isso evita que a urgência domine o importante.",
+        "faria": "Liste seus 10 maiores problemas. Circule os 3 que, se resolvidos, fariam outros 7 desaparecerem. Esse é o seu Núcleo.",
+        "ferramenta": "Exercício: Matriz de Alavancagem"
+      },
+      {
+        "ordem": 3, "nome": "Cultura",
+        "descricao": "Construir os rituais e linguagens que tornam o pedagógico o centro de tudo.",
+        "fez": "Criei o 'Fórum Pedagógico Quinzenal' — 90 minutos, toda equipe, foco exclusivo no ensino. No início a resistência era total. Em 6 meses era o ritual mais aguardado.",
+        "faz": "Cada decisão administrativa passa pelo filtro: 'Isso serve o pedagógico ou compete com ele?' Se competir, redesenho ou delego.",
+        "faria": "Escolha um ritual semanal de 30 minutos focado exclusivamente em pedagógico. Proteja esse tempo como se fosse sua reunião com o mantenedor.",
+        "ferramenta": "Guia: 7 Rituais de Cultura Pedagógica"
+      },
+      {
+        "ordem": 4, "nome": "Resultados",
+        "descricao": "Medir o que importa e comunicar conquistas para manter o movimento.",
+        "fez": "Criamos um dashboard pedagógico simples — 5 indicadores, atualizado mensalmente. O que antes eram conversas vagas passou a ter dados. As decisões ficaram 3x mais rápidas.",
+        "faz": "Toda segunda-feira olho meus 5 indicadores. Se algum está em vermelho, aquele dia começa com uma ação corretiva antes de qualquer outra coisa.",
+        "faria": "Defina 5 indicadores que provam que sua escola está avançando pedagogicamente. Comece simples: frequência de professores, nota de satisfação, número de inovações testadas.",
+        "ferramenta": "Template: Dashboard Pedagógico 5 Indicadores"
+      }
+    ],
+    "didatica": {
+      "aproximar": "Começo sempre com a dor que o gestor já sente: a reunião que não resolve, o professor que resiste, a sensação de estar sempre no fogo. Mostro que reconheço esse território antes de propor qualquer caminho.",
+      "conectar": "Uso casos reais — com permissão e nomes alterados — de escolas que estavam exatamente ali. A identificação cria a ponte entre 'isso é sobre mim' e 'isso tem solução'.",
+      "desejar": "Mostro o Ponto B de forma concreta: diretores que saem às 17h, professores que pedem mais responsabilidade, pais que renovam matrícula sem ser convencidos. O desejo é possível e específico."
+    },
+    "pitch": {
+      "uma_frase": "Transformo gestores escolares sobrecarregados em líderes pedagógicos estratégicos — em 12 semanas, sem precisar demitir ninguém.",
+      "quem": "Diretores e coordenadores de escolas privadas de médio porte",
+      "problema_externo": "Passam 70% do tempo em tarefas administrativas e apagando conflitos, sem espaço para o que realmente move resultados: o pedagógico.",
+      "problema_interno": "Sentem que falharam como líderes — que não foram preparados para isso e que ninguém consegue sem dom natural.",
+      "problema_filosofico": "Acreditam que escolas de qualidade dependem de gestores heróicos, e não de sistemas bem construídos.",
+      "solucao": "O Método ANCORA — 4 etapas estruturadas para construir uma escola que funciona com o gestor presente e também sem ele.",
+      "diferencial": "Única metodologia desenvolvida por quem foi diretora, coordenadora e professora na mesma escola — conhece os três ângulos do problema.",
+      "resultado": "Equipe mais autônoma, 30% menos conflitos operacionais e indicadores pedagógicos mensuráveis em 12 semanas."
+    },
+    "portfolio": [
+      { "nivel": "Entrada", "nome": "Diagnóstico ANCORA", "formato": "Consultoria individual · 2 horas", "descricao": "Mapeamento do território atual da escola e identificação das 3 alavancas prioritárias.", "preco_faixa": "R$ 497" },
+      { "nivel": "Core", "nome": "Imersão ANCORA — 12 Semanas", "formato": "Mentoria em grupo · Encontros semanais online", "descricao": "Implementação completa do Método com acompanhamento, templates e comunidade de gestores.", "preco_faixa": "R$ 2.400" },
+      { "nivel": "Premium", "nome": "ANCORA Escola", "formato": "Consultoria in-company · 6 meses", "descricao": "Implantação do método em toda a equipe gestora com diagnóstico, treinamentos e dashboard personalizado.", "preco_faixa": "R$ 18.000" }
+    ],
+    "arsenal": {
+      "frases_autorais": [
+        "Você não foi contratado para apagar incêndios. Foi contratado para construir uma escola onde incêndios não acontecem.",
+        "O gestor sobrecarregado não é um problema de competência. É um problema de sistema.",
+        "A escola que depende de um gestor herói está a uma doença de entrar em colapso."
+      ],
+      "historia_origem": {
+        "situacao": "Em 2015, assumi a direção de uma escola com 800 alunos em crise: evasão de 30%, professores pedindo demissão, pais ameaçando processos.",
+        "tentativa": "Tentei o que todos ensinam: reuniões motivacionais, bonificações, controle mais rígido. Três meses depois, eu estava funcionando 14 horas por dia e a escola continuava igual.",
+        "insight": "Um consultor me perguntou: 'Quantos problemas você resolveu que voltaram?' Contei: 38 dos últimos 40. Ali entendi: eu estava resolvendo sintomas de um sistema que não existia.",
+        "metodo": "Passei um ano mapeando o que diferenciava as escolas que funcionavam. Identifiquei 4 padrões. Testei. Refinei. Virou o ANCORA.",
+        "resultado": "Em 18 meses: evasão caiu para 8%, 3 professores foram promovidos internamente e eu saía às 17h30 todos os dias."
+      },
+      "mvp_30_dias": "Oferecer 5 Diagnósticos ANCORA gratuitos para coordenadores da rede de contatos. Objetivo: coletar 5 depoimentos em vídeo e validar as alavancas identificadas no método com dados reais.",
+      "proximo_passo": "Agendar 3 Diagnósticos ANCORA esta semana com coordenadores que já manifestaram interesse."
+    },
+    "rota_resumo": "Cada etapa do ANCORA foi testada em condições reais de escola em crise. As ferramentas existem porque foram necessárias — não porque pareciam boas no papel.",
+    "painel_sintese": "Método validado em campo, didática forte, pitch com os 3 níveis de problema nomeados. Portfólio bem escalonado. Recomendação: iniciar MVP com Diagnóstico gratuito antes de abrir turma de Imersão."
+  };
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primaria: #1B3A5C;
+      --secundaria: #2D6A9F;
+      --acento: #E8744A;
+      --fundo: #F8F6F1;
+      --papel: #FFFFFF;
+      --texto: #2C2C2C;
+      --texto-suave: #666;
+      --borda: #E0DBCF;
+      --sombra: 0 2px 20px rgba(27,58,92,0.08);
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--fundo);
+      color: var(--texto);
+      display: grid;
+      grid-template-columns: 256px 1fr;
+      grid-template-rows: 60px 1fr;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ── Header ── */
+    .hdr {
+      grid-column: 1 / -1;
+      background: var(--primaria);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      z-index: 100;
+    }
+    .hdr-brand { font-family: var(--serif); font-size: 17px; color: #fff; font-weight: 700; }
+    .hdr-brand em { font-style: normal; color: var(--acento); }
+    .hdr-meta { font-size: 11px; color: rgba(255,255,255,0.45); }
+    .btn-pdf {
+      background: var(--acento); color: #fff; border: none;
+      padding: 8px 18px; border-radius: 4px;
+      font-family: var(--sans); font-size: 12px; font-weight: 600;
+      cursor: pointer; letter-spacing: 0.04em; transition: opacity .2s;
+    }
+    .btn-pdf:hover { opacity: .85; }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      background: var(--primaria);
+      padding: 28px 0;
+      overflow-y: auto;
+    }
+    .toc-head {
+      font-size: 9px; font-weight: 700; letter-spacing: .2em;
+      color: rgba(255,255,255,.3); text-transform: uppercase;
+      padding: 0 20px; margin-bottom: 12px;
+    }
+    .toc-a {
+      display: flex; align-items: center; gap: 10px;
+      padding: 9px 20px; font-size: 12px; font-weight: 500;
+      color: rgba(255,255,255,.5); text-decoration: none;
+      border-left: 2px solid transparent; transition: all .2s; line-height: 1.3;
+    }
+    .toc-a:hover, .toc-a.active {
+      color: #fff; border-left-color: var(--acento);
+      background: rgba(255,255,255,.05);
+    }
+    .toc-n { font-size: 9px; font-family: var(--serif); color: var(--acento); opacity: .8; min-width: 14px; }
+
+    /* ── Main scroll ── */
+    .main { overflow-y: auto; height: calc(100vh - 60px); }
+    section { scroll-margin-top: 20px; }
+
+    /* ── CAPA ── */
+    .capa {
+      min-height: calc(100vh - 60px);
+      background: var(--primaria);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 80px 60px;
+      position: relative; overflow: hidden;
+    }
+    .capa::before {
+      content:''; position:absolute; top:-100px; right:-100px;
+      width:440px; height:440px; border-radius:50%;
+      border:2px solid rgba(232,116,74,.12);
+    }
+    .capa::after {
+      content:''; position:absolute; bottom:-70px; left:-70px;
+      width:320px; height:320px; border-radius:50%;
+      border:2px solid rgba(45,106,159,.2);
+    }
+    .capa-badge { font-size:10px; font-weight:700; letter-spacing:.2em; color:var(--acento); text-transform:uppercase; margin-bottom:24px; }
+    .capa-h1 { font-family:var(--serif); font-size:clamp(52px,6vw,84px); font-weight:900; color:#fff; line-height:1.05; margin-bottom:12px; }
+    .capa-h1 em { font-style:normal; color:var(--acento); }
+    .capa-tag { font-size:17px; color:rgba(255,255,255,.6); font-weight:300; max-width:460px; line-height:1.6; margin-bottom:52px; }
+    .tri { display:flex; gap:4px; margin-bottom:52px; }
+    .tri span { height:3px; border-radius:2px; }
+    .tri .t1 { width:36px; background:rgba(255,255,255,.2); }
+    .tri .t2 { width:24px; background:var(--secundaria); }
+    .tri .t3 { width:14px; background:var(--acento); }
+    .avatar { width:60px; height:60px; border-radius:50%; background:var(--secundaria); display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:22px; color:#fff; font-weight:700; margin:0 auto 10px; border:3px solid rgba(255,255,255,.18); }
+    .capa-nome { font-family:var(--serif); font-size:17px; color:#fff; }
+    .capa-meta { font-size:11px; color:rgba(255,255,255,.4); margin-top:4px; }
+
+    /* ── Chapter Cover ── */
+    .ch-cover {
+      background:var(--papel); display:flex; align-items:stretch;
+      min-height:200px; box-shadow:var(--sombra); overflow:hidden; position:relative;
+    }
+    .ch-strip { width:10px; flex-shrink:0; }
+    .ch-body { padding:44px 52px; flex:1; display:flex; flex-direction:column; justify-content:center; }
+    .ch-num {
+      font-family:var(--serif); font-size:110px; font-weight:900;
+      color:var(--fundo); line-height:.9; position:absolute;
+      right:52px; top:50%; transform:translateY(-50%); user-select:none;
+    }
+    .ch-label { font-size:10px; font-weight:700; letter-spacing:.2em; color:var(--acento); text-transform:uppercase; margin-bottom:10px; }
+    .ch-title { font-family:var(--serif); font-size:36px; font-weight:700; color:var(--primaria); line-height:1.15; }
+    .ch-desc { margin-top:12px; font-size:14px; color:var(--texto-suave); max-width:480px; line-height:1.6; }
+
+    /* ── Content wrapper ── */
+    .sec { padding:60px 52px; }
+    .sec.bg-w { background:var(--papel); }
+
+    /* ── Typography helpers ── */
+    .lbl { font-size:10px; font-weight:700; letter-spacing:.18em; color:var(--acento); text-transform:uppercase; margin-bottom:6px; }
+    .sec-title { font-family:var(--serif); font-size:26px; font-weight:700; color:var(--primaria); line-height:1.2; margin-bottom:20px; }
+    .body-txt { font-size:14px; line-height:1.65; color:var(--texto-suave); }
+
+    .divider { display:flex; gap:4px; margin:36px 0; }
+    .divider span { height:3px; border-radius:2px; }
+    .divider .d1 { width:44px; background:var(--primaria); }
+    .divider .d2 { width:28px; background:var(--secundaria); }
+    .divider .d3 { width:14px; background:var(--acento); }
+
+    /* ── Journey A→B ── */
+    .journey { display:grid; grid-template-columns:1fr 52px 1fr; align-items:center; background:var(--papel); border-radius:8px; overflow:hidden; box-shadow:var(--sombra); margin:28px 0; }
+    .j-col { padding:28px 24px; }
+    .j-from { background:#fff5f0; }
+    .j-to   { background:#eef4fb; }
+    .j-arrow { display:flex; align-items:center; justify-content:center; font-size:26px; color:var(--secundaria); background:var(--papel); }
+    .j-badge { font-size:9px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; margin-bottom:8px; }
+    .j-from .j-badge { color:var(--acento); }
+    .j-to   .j-badge { color:var(--secundaria); }
+    .j-text { font-size:14px; color:var(--texto); font-weight:500; line-height:1.5; }
+
+    /* ── Callout box ── */
+    .callout { background:var(--primaria); color:#fff; border-radius:6px; padding:28px 32px; margin:24px 0; }
+    .callout .c-lbl { font-size:9px; font-weight:700; letter-spacing:.18em; color:var(--acento); text-transform:uppercase; margin-bottom:10px; }
+    .callout p { font-size:14px; line-height:1.65; color:rgba(255,255,255,.85); }
+
+    /* ── SVG Framework wrapper ── */
+    .fw-wrap { background:var(--papel); border-radius:8px; padding:44px 48px; text-align:center; box-shadow:var(--sombra); margin:28px 0; }
+    .fw-title { font-family:var(--serif); font-size:18px; color:var(--primaria); margin-bottom:32px; font-weight:700; }
+
+    /* ── Step cards ── */
+    .step-card { background:var(--papel); border-radius:8px; overflow:hidden; box-shadow:var(--sombra); margin:24px 0; }
+    .step-hdr { display:flex; align-items:center; gap:18px; padding:22px 28px; background:var(--primaria); }
+    .step-num { width:44px; height:44px; border-radius:50%; background:var(--acento); display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:20px; font-weight:700; color:#fff; flex-shrink:0; }
+    .step-title { font-family:var(--serif); font-size:22px; color:#fff; font-weight:700; }
+    .step-sub { font-size:12px; color:rgba(255,255,255,.6); margin-top:3px; line-height:1.4; }
+    .step-body { padding:28px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:18px; }
+    .f-box { border-radius:6px; padding:18px; }
+    .f-fez  { background:var(--primaria); color:#fff; }
+    .f-faz  { background:rgba(27,58,92,.07); }
+    .f-faria{ background:rgba(232,116,74,.08); border:1px solid rgba(232,116,74,.2); }
+    .f-lbl  { font-size:9px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; margin-bottom:8px; }
+    .f-fez  .f-lbl { color:var(--acento); }
+    .f-faz  .f-lbl { color:var(--secundaria); }
+    .f-faria .f-lbl { color:var(--acento); }
+    .f-txt  { font-size:12.5px; line-height:1.6; }
+    .f-fez  .f-txt { color:rgba(255,255,255,.85); }
+    .f-faz  .f-txt, .f-faria .f-txt { color:var(--texto); }
+    .step-tool { padding:14px 28px; border-top:1px solid var(--borda); display:flex; align-items:center; gap:10px; }
+    .tool-badge { background:var(--acento); color:#fff; font-size:10px; font-weight:700; padding:4px 12px; border-radius:20px; white-space:nowrap; }
+    .tool-nm { font-size:12px; color:var(--texto-suave); }
+
+    /* ── Insight panel ── */
+    .insight { background:rgba(27,58,92,.05); border:1px solid rgba(27,58,92,.14); border-radius:8px; padding:24px 28px; margin:28px 0; }
+    .insight .i-lbl { font-size:9px; font-weight:700; letter-spacing:.18em; color:var(--secundaria); text-transform:uppercase; margin-bottom:8px; }
+    .insight p { font-size:13px; color:var(--texto); line-height:1.65; font-style:italic; }
+
+    /* ── Swatches ── */
+    .swatches { display:flex; gap:14px; margin:20px 0 28px; }
+    .swatch { flex:1; border-radius:6px; overflow:hidden; box-shadow:var(--sombra); }
+    .sw-color { height:72px; }
+    .sw-info { background:var(--papel); padding:10px 12px; }
+    .sw-name { font-size:11px; font-weight:600; }
+    .sw-hex { font-size:10px; color:var(--texto-suave); font-family:monospace; }
+
+    /* ── Pull quote ── */
+    .pq { border-left:4px solid var(--acento); padding:18px 26px; background:var(--papel); border-radius:0 6px 6px 0; margin:20px 0; box-shadow:var(--sombra); }
+    .pq blockquote { font-family:var(--serif); font-size:17px; font-style:italic; color:var(--primaria); line-height:1.6; }
+
+    /* ── Imaginacao grid ── */
+    .im-grid { display:grid; grid-template-columns:1fr 44px 1fr 44px 1fr; align-items:stretch; margin:28px 0; }
+    .im-card { background:var(--papel); border-radius:8px; padding:26px 22px; box-shadow:var(--sombra); }
+    .im-arrow { display:flex; align-items:center; justify-content:center; font-size:22px; color:var(--borda); }
+    .im-icon { width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:20px; margin-bottom:12px; }
+    .im-card:nth-child(1) .im-icon { background:rgba(27,58,92,.1); }
+    .im-card:nth-child(3) .im-icon { background:rgba(45,106,159,.1); }
+    .im-card:nth-child(5) .im-icon { background:rgba(232,116,74,.1); }
+    .im-lbl { font-size:10px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; margin-bottom:8px; }
+    .im-card:nth-child(1) .im-lbl { color:var(--primaria); }
+    .im-card:nth-child(3) .im-lbl { color:var(--secundaria); }
+    .im-card:nth-child(5) .im-lbl { color:var(--acento); }
+    .im-txt { font-size:13px; line-height:1.6; color:var(--texto-suave); }
+
+    /* ── Pitch hero ── */
+    .pitch-hero { background:var(--primaria); border-radius:8px; padding:38px 44px; margin:20px 0; }
+    .ph-lbl { font-size:10px; font-weight:700; letter-spacing:.2em; color:var(--acento); text-transform:uppercase; margin-bottom:14px; }
+    .ph-frase { font-family:var(--serif); font-size:24px; color:#fff; font-style:italic; line-height:1.45; }
+
+    /* ── 3 problemas ── */
+    .prob-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:28px 0; }
+    .prob-card { background:var(--papel); border-radius:8px; padding:22px; box-shadow:var(--sombra); border-top:3px solid; }
+    .prob-card:nth-child(1) { border-top-color:var(--primaria); }
+    .prob-card:nth-child(2) { border-top-color:var(--secundaria); }
+    .prob-card:nth-child(3) { border-top-color:var(--acento); }
+    .prob-tipo { font-size:9px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; margin-bottom:8px; }
+    .prob-card:nth-child(1) .prob-tipo { color:var(--primaria); }
+    .prob-card:nth-child(2) .prob-tipo { color:var(--secundaria); }
+    .prob-card:nth-child(3) .prob-tipo { color:var(--acento); }
+    .prob-txt { font-size:13px; line-height:1.6; }
+
+    /* ── Frame pitch grid ── */
+    .fr-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:20px 0; }
+    .fr-item { background:var(--papel); border-radius:6px; padding:18px 22px; box-shadow:var(--sombra); }
+    .fr-lbl { font-size:9px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:var(--secundaria); margin-bottom:7px; }
+    .fr-txt { font-size:13px; line-height:1.55; }
+
+    /* ── Portfolio ── */
+    .port-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:28px 0; }
+    .port-card { background:var(--papel); border-radius:8px; overflow:hidden; box-shadow:var(--sombra); display:flex; flex-direction:column; }
+    .port-hdr { padding:18px 22px; }
+    .port-card:nth-child(1) .port-hdr { background:var(--primaria); }
+    .port-card:nth-child(2) .port-hdr { background:var(--secundaria); }
+    .port-card:nth-child(3) .port-hdr { background:var(--acento); }
+    .port-nivel { font-size:9px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.55); margin-bottom:5px; }
+    .port-nome { font-family:var(--serif); font-size:18px; color:#fff; font-weight:700; line-height:1.2; }
+    .port-body { padding:20px 22px; flex:1; }
+    .port-fmt { font-size:10px; color:var(--texto-suave); font-weight:500; text-transform:uppercase; letter-spacing:.07em; margin-bottom:10px; }
+    .port-desc { font-size:13px; line-height:1.6; }
+    .port-price { padding:14px 22px; border-top:1px solid var(--borda); font-family:var(--serif); font-size:20px; font-weight:700; color:var(--acento); }
+
+    /* ── Frases ── */
+    .frases { display:flex; flex-direction:column; gap:14px; margin:20px 0; }
+
+    /* ── Timeline ── */
+    .timeline { margin:28px 0; position:relative; padding-left:28px; }
+    .timeline::before { content:''; position:absolute; left:5px; top:8px; bottom:8px; width:2px; background:var(--borda); }
+    .tl-item { position:relative; margin-bottom:24px; }
+    .tl-dot { position:absolute; left:-23px; top:4px; width:10px; height:10px; border-radius:50%; background:var(--acento); border:2px solid var(--fundo); }
+    .tl-lbl { font-size:9px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--acento); margin-bottom:5px; }
+    .tl-txt { font-size:13px; line-height:1.6; }
+
+    /* ── MVP / CTA ── */
+    .mvp-box { background:var(--primaria); border-radius:8px; padding:32px 38px; margin:20px 0; }
+    .mvp-box .c-lbl { color:var(--acento); font-size:9px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; margin-bottom:10px; }
+    .mvp-box p { color:rgba(255,255,255,.85); font-size:14px; line-height:1.65; }
+    .cta-box { background:var(--acento); border-radius:8px; padding:32px 38px; margin:20px 0; text-align:center; }
+    .cta-box .cta-lbl { font-size:10px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.65); margin-bottom:10px; }
+    .cta-box .cta-txt { font-family:var(--serif); font-size:20px; color:#fff; font-weight:700; line-height:1.35; }
+
+    /* ── Footer ── */
+    .foot { background:var(--primaria); padding:52px; text-align:center; }
+    .foot p { font-size:12px; color:rgba(255,255,255,.35); }
+
+    /* ── Print ── */
+    @media print {
+      body { display:block; background:#fff; height:auto; overflow:visible; }
+      .hdr, .sidebar { display:none; }
+      .main { height:auto; overflow:visible; }
+      .capa { min-height:100vh; page-break-after:always; }
+      .ch-cover { page-break-before:always; min-height:160px; }
+      .step-card { page-break-inside:avoid; }
+      * { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+      @page { size:A4; margin:15mm 18mm; }
+      .sec { padding:28px 0; }
+      .btn-pdf { display:none; }
+      .step-body { grid-template-columns:1fr 1fr 1fr; }
+    }
+
+    .main::-webkit-scrollbar { width:5px; }
+    .main::-webkit-scrollbar-thumb { background:var(--borda); border-radius:3px; }
+    .sidebar::-webkit-scrollbar { width:3px; }
+    .sidebar::-webkit-scrollbar-thumb { background:rgba(255,255,255,.12); border-radius:2px; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="hdr">
+    <div class="hdr-brand"><em id="h-nome">Método ANCORA</em></div>
+    <div class="hdr-meta" id="h-meta">Ana Beatriz Campos · Gestão Educacional</div>
+    <button class="btn-pdf" onclick="window.print()">↓ Exportar PDF</button>
+  </header>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <div class="toc-head">Sumário</div>
+    <a class="toc-a" href="#capa">      <span class="toc-n">—</span>Capa</a>
+    <a class="toc-a" href="#destino">   <span class="toc-n">01</span>Destino</a>
+    <a class="toc-a" href="#caminho">   <span class="toc-n">02</span>Caminho</a>
+    <a class="toc-a" href="#identidade"><span class="toc-n">03</span>Identidade</a>
+    <a class="toc-a" href="#didatica">  <span class="toc-n">04</span>Didática</a>
+    <a class="toc-a" href="#pitch">     <span class="toc-n">05</span>Pitch</a>
+    <a class="toc-a" href="#portfolio"> <span class="toc-n">06</span>Portfólio</a>
+    <a class="toc-a" href="#arsenal">   <span class="toc-n">07</span>Arsenal</a>
+    <a class="toc-a" href="#proximos">  <span class="toc-n">08</span>Próximos Passos</a>
+  </nav>
+
+  <!-- Main -->
+  <main class="main" id="main-scroll">
+
+    <!-- CAPA -->
+    <section id="capa" class="capa">
+      <div class="capa-badge">Método Proprietário — Blueprint Completo</div>
+      <h1 class="capa-h1">Método<br><em id="c-nome">ANCORA</em></h1>
+      <p class="capa-tag" id="c-tag">Da sobrecarga à liderança pedagógica estratégica</p>
+      <div class="tri"><span class="t1"></span><span class="t2"></span><span class="t3"></span></div>
+      <div class="avatar" id="c-avatar">A</div>
+      <div class="capa-nome" id="c-autora">Ana Beatriz Campos</div>
+      <div class="capa-meta" id="c-meta">Gestão Educacional · 12 anos de experiência</div>
+    </section>
+
+    <!-- CH DESTINO -->
+    <section class="ch-cover" id="destino">
+      <div class="ch-strip" style="background:var(--primaria)"></div>
+      <div class="ch-body">
+        <div class="ch-label">Capítulo 01</div>
+        <h2 class="ch-title">Destino</h2>
+        <p class="ch-desc">Quem você transforma e para onde a jornada conduz.</p>
+      </div>
+      <div class="ch-num">D</div>
+    </section>
+
+    <div class="sec">
+      <div class="lbl">Público Ideal</div>
+      <div class="sec-title" id="d-pub">Diretores e coordenadores pedagógicos de escolas privadas</div>
+      <div class="divider"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
+      <div class="journey">
+        <div class="j-col j-from">
+          <div class="j-badge">Ponto A — Onde estão</div>
+          <div class="j-text" id="d-pa">Gestor sobrecarregado, apagando incêndios</div>
+        </div>
+        <div class="j-arrow">→</div>
+        <div class="j-col j-to">
+          <div class="j-badge">Ponto B — Onde chegarão</div>
+          <div class="j-text" id="d-pb">Líder pedagógico estratégico com equipe autônoma</div>
+        </div>
+      </div>
+      <div class="callout">
+        <div class="c-lbl">Por que esse público?</div>
+        <p>O gestor escolar acumula papéis impossíveis: pedagógico, administrativo, financeiro e relacional. O sistema cria heróis quando deveria criar sistemas. O ANCORA resolve exatamente essa contradição.</p>
+      </div>
+    </div>
+
+    <!-- CH CAMINHO -->
+    <section class="ch-cover" id="caminho">
+      <div class="ch-strip" style="background:var(--secundaria)"></div>
+      <div class="ch-body">
+        <div class="ch-label">Capítulo 02</div>
+        <h2 class="ch-title">Caminho</h2>
+        <p class="ch-desc">As 4 etapas do Método ANCORA — da ancoragem aos resultados mensuráveis.</p>
+      </div>
+      <div class="ch-num">C</div>
+    </section>
+
+    <div class="sec bg-w">
+      <!-- SVG Escada -->
+      <div class="fw-wrap">
+        <div class="fw-title">Framework ANCORA — As 4 Etapas</div>
+        <svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:580px">
+          <defs>
+            <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#1B3A5C"/>
+              <stop offset="100%" stop-color="#2D6A9F"/>
+            </linearGradient>
+          </defs>
+          <!-- Step bands -->
+          <rect x="20"  y="210" width="600" height="72" rx="4" fill="#1B3A5C" opacity=".07"/>
+          <rect x="175" y="148" width="445" height="64" rx="4" fill="#1B3A5C" opacity=".07"/>
+          <rect x="330" y="86"  width="290" height="64" rx="4" fill="#1B3A5C" opacity=".07"/>
+          <rect x="485" y="24"  width="135" height="64" rx="4" fill="url(#g1)" opacity=".88"/>
+          <!-- Top edges (acento) -->
+          <rect x="20"  y="202" width="155" height="10" rx="2" fill="#E8744A"/>
+          <rect x="175" y="140" width="155" height="10" rx="2" fill="#E8744A"/>
+          <rect x="330" y="78"  width="155" height="10" rx="2" fill="#E8744A"/>
+          <rect x="485" y="16"  width="135" height="10" rx="2" fill="#E8744A"/>
+          <!-- Labels 1 -->
+          <text x="97" y="230" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#E8744A" letter-spacing="1">01</text>
+          <text x="97" y="248" text-anchor="middle" font-family="Playfair Display,serif" font-size="14" font-weight="700" fill="#1B3A5C">Ancoragem</text>
+          <text x="97" y="265" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#888">Mapear o território</text>
+          <!-- Labels 2 -->
+          <text x="252" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#E8744A" letter-spacing="1">02</text>
+          <text x="252" y="186" text-anchor="middle" font-family="Playfair Display,serif" font-size="14" font-weight="700" fill="#1B3A5C">Núcleo</text>
+          <text x="252" y="203" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#888">Identificar alavancas</text>
+          <!-- Labels 3 -->
+          <text x="407" y="106" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#E8744A" letter-spacing="1">03</text>
+          <text x="407" y="124" text-anchor="middle" font-family="Playfair Display,serif" font-size="14" font-weight="700" fill="#1B3A5C">Cultura</text>
+          <text x="407" y="141" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#888">Construir rituais</text>
+          <!-- Labels 4 -->
+          <text x="552" y="44" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#E8744A" letter-spacing="1">04</text>
+          <text x="552" y="62" text-anchor="middle" font-family="Playfair Display,serif" font-size="14" font-weight="700" fill="#fff">Resultados</text>
+          <text x="552" y="79" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="rgba(255,255,255,.65)">Medir e comunicar</text>
+          <!-- Ascensão arrow -->
+          <line x1="14" y1="285" x2="14" y2="20" stroke="#E8744A" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <polygon points="14,14 10,24 18,24" fill="#E8744A"/>
+        </svg>
+      </div>
+
+      <div class="divider"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
+      <div id="steps-wrap"></div>
+
+      <div class="insight">
+        <div class="i-lbl">Nota do Método</div>
+        <p id="rota-res">Cada etapa foi testada em condições reais de escola em crise.</p>
+      </div>
+    </div>
+
+    <!-- CH IDENTIDADE -->
+    <section class="ch-cover" id="identidade">
+      <div class="ch-strip" style="background:var(--acento)"></div>
+      <div class="ch-body">
+        <div class="ch-label">Capítulo 03</div>
+        <h2 class="ch-title">Identidade</h2>
+        <p class="ch-desc">O nome, a paleta e as palavras que fazem o método ser único.</p>
+      </div>
+      <div class="ch-num">I</div>
+    </section>
+
+    <div class="sec">
+      <div class="lbl">Nome Oficial</div>
+      <div class="sec-title" id="id-nome">Método ANCORA</div>
+      <div class="lbl">Tagline</div>
+      <p class="body-txt" style="margin-bottom:28px" id="id-tag">Da sobrecarga à liderança pedagógica estratégica</p>
+      <div class="pq"><blockquote id="id-frase">"Frase autoral do método"</blockquote></div>
+      <div class="divider"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
+      <div class="lbl">Paleta de Cores</div>
+      <div class="swatches" id="id-sw"></div>
+      <div class="callout">
+        <div class="c-lbl">Forma Visual — Escada</div>
+        <p id="id-forma">Quatro degraus representando a ascensão da gestão reativa para a liderança transformadora.</p>
+      </div>
+    </div>
+
+    <!-- CH DIDÁTICA -->
+    <section class="ch-cover" id="didatica">
+      <div class="ch-strip" style="background:linear-gradient(to bottom,var(--primaria),var(--acento))"></div>
+      <div class="ch-body">
+        <div class="ch-label">Capítulo 04</div>
+        <h2 class="ch-title">Didática</h2>
+        <p class="ch-desc">A Teoria da Imaginação — como o método cria aprendizado que fica.</p>
+      </div>
+      <div class="ch-num">Dd</div>
+    </section>
+
+    <div class="sec bg-w">
+      <div class="lbl">Teoria da Imaginação</div>
+      <div class="sec-title">Aproximar → Conectar → Desejar</div>
+      <p class="body-txt" style="max-width:580px;margin-bottom:28px">O método usa três movimentos didáticos para transformar informação em ação. Cada aula, sessão e material segue essa sequência.</p>
+      <div class="im-grid">
+        <div class="im-card">
+          <div class="im-icon">🔍</div>
+          <div class="im-lbl">Aproximar</div>
+          <div class="im-txt" id="did-ap"></div>
+        </div>
+        <div class="im-arrow">→</div>
+        <div class="im-card">
+          <div class="im-icon">🔗</div>
+          <div class="im-lbl">Conectar</div>
+          <div class="im-txt" id="did-co"></div>
+        </div>
+        <div class="im-arrow">→</div>
+        <div class="im-card">
+          <div class="im-icon">✨</div>
+          <div class="im-lbl">Desejar</div>
+          <div class="im-txt" id="did-de"></div>
+        </div>
+      </div>
+      <div class="callout">
+        <div class="c-lbl">Por que funciona</div>
+        <p>A maioria dos cursos falha porque começa pelo "o que fazer" sem criar ressonância emocional. O ciclo Aproximar→Conectar→Desejar garante que o conteúdo não seja apenas compreendido — seja desejado e aplicado.</p>
+      </div>
+    </div>
+
+    <!-- CH PITCH -->
+    <section class="ch-cover" id="pitch">
+      <div class="ch-strip" style="background:var(--acento)"></div>
+      <div class="ch-body">
+        <div class="ch-label">Capítulo 05</div>
+        <h2 class="ch-title">Pitch</h2>
+        <p class="ch-desc">A narrativa de venda que nomeia as três camadas de dor.</p>
+      </div>
+      <div class="ch-num">P</div>
+    </section>
+
+    <div class="sec">
+      <div class="pitch-hero">
+        <div class="ph-lbl">Uma Frase</div>
+        <div class="ph-frase" id="p-frase"></div>
+      </div>
+      <div class="lbl" style="margin-top:28px">Os 3 Níveis de Problema — Donald Miller / StoryBrand</div>
+      <div class="prob-grid" id="prob-grid">
+        <div class="prob-card">
+          <div class="prob-tipo">Externo — visível</div>
+          <div class="prob-txt" id="p-ext"></div>
+        </div>
+        <div class="prob-card">
+          <div class="prob-tipo">Interno — emocional</div>
+          <div class="prob-txt" id="p-int"></div>
+        </div>
+        <div class="prob-card">
+          <div class="prob-tipo">Filosófico — identidade</div>
+          <div class="prob-txt" id="p-fil"></div>
+        </div>
+      </div>
+      <div class="divider"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
+      <div class="lbl">Frame Completo</div>
+      <div class="fr-grid">
+        <div class="fr-item"><div class="fr-lbl">Quem</div><div class="fr-txt" id="p-quem"></div></div>
+        <div class="fr-item"><div class="fr-lbl">Solução</div><div class="fr-txt" id="p-sol"></div></div>
+        <div class="fr-item"><div class="fr-lbl">Diferencial</div><div class="fr-txt" id="p-dif"></div></div>
+        <div class="fr-item"><div class="fr-lbl">Resultado Prometido</div><div class="fr-txt" id="p-res"></div></div>
+      </div>
+    </div>
+
+    <!-- CH PORTFÓLIO -->
+    <section class="ch-cover" id="portfolio">
+      <div class="ch-strip" style="background:var(--secundaria)"></div>
+      <div class="ch-body">
+        <div class="ch-label">Capítulo 06</div>
+        <h2 class="ch-title">Portfólio</h2>
+        <p class="ch-desc">Três produtos para três momentos de maturidade do cliente.</p>
+      </div>
+      <div class="ch-num">Pp</div>
+    </section>
+
+    <div class="sec bg-w">
+      <p class="body-txt" style="max-width:580px;margin-bottom:28px">Portfólio seguindo a Regra de Ouro do E-Myth: máximo 3 produtos ativos, escalonados por dependência e ticket. Comece validando, depois escale.</p>
+      <div class="port-grid" id="port-grid"></div>
+      <div class="callout">
+        <div class="c-lbl">Estratégia de Escalonamento — Gerber / E-Myth</div>
+        <p>O Diagnóstico captura quem ainda não conhece o método. A Imersão valida com múltiplos clientes simultâneos. A Consultoria entrega o resultado máximo. Nunca construa o produto maior antes de validar o menor.</p>
+      </div>
+    </div>
+
+    <!-- CH ARSENAL -->
+    <section class="ch-cover" id="arsenal">
+      <div class="ch-strip" style="background:var(--primaria)"></div>
+      <div class="ch-body">
+        <div class="ch-label">Capítulo 07</div>
+        <h2 class="ch-title">Arsenal</h2>
+        <p class="ch-desc">Frases autorais, história de origem e as palavras que posicionam.</p>
+      </div>
+      <div class="ch-num">A</div>
+    </section>
+
+    <div class="sec">
+      <div class="lbl">Frases Autorais</div>
+      <div class="frases" id="frases-wrap"></div>
+      <div class="divider"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
+      <div class="lbl">História de Origem — Russell Brunson / Expert Secrets</div>
+      <div class="sec-title" style="margin-bottom:28px">Como o método nasceu</div>
+      <div class="timeline" id="tl-wrap"></div>
+    </div>
+
+    <!-- CH PRÓXIMOS PASSOS -->
+    <section class="ch-cover" id="proximos">
+      <div class="ch-strip" style="background:var(--acento)"></div>
+      <div class="ch-body">
+        <div class="ch-label">Capítulo 08</div>
+        <h2 class="ch-title">Próximos Passos</h2>
+        <p class="ch-desc">O MVP de 30 dias e a primeira ação concreta.</p>
+      </div>
+      <div class="ch-num">→</div>
+    </section>
+
+    <div class="sec bg-w">
+      <div class="mvp-box">
+        <div class="c-lbl">MVP — 30 Dias</div>
+        <p id="mvp-txt"></p>
+      </div>
+      <div class="cta-box">
+        <div class="cta-lbl">Primeira Ação</div>
+        <div class="cta-txt" id="cta-txt"></div>
+      </div>
+      <div class="insight" style="margin-top:28px">
+        <div class="i-lbl">Avaliação do Painel de Especialistas</div>
+        <p id="painel-txt"></p>
+      </div>
+    </div>
+
+    <div class="foot"><p id="foot-txt">Método ANCORA · Blueprint gerado pelo Orquestrador de Método Proprietário</p></div>
+
+  </main>
+
+  <script>
+  (function() {
+    const bp = window.__blueprint;
+    if (!bp) return;
+    const c = bp.identidade.cores;
+
+    // CSS vars
+    const r = document.documentElement;
+    r.style.setProperty('--primaria',   c.primaria);
+    r.style.setProperty('--secundaria', c.secundaria);
+    r.style.setProperty('--acento',     c.acento);
+
+    // Header
+    document.getElementById('h-nome').textContent = bp.identidade.nome_oficial;
+    document.getElementById('h-meta').textContent = `${bp.criador.nome} · ${bp.criador.area}`;
+
+    // Capa
+    document.getElementById('c-nome').textContent = bp.identidade.sigla || bp.identidade.nome_oficial;
+    document.getElementById('c-tag').textContent  = bp.identidade.tagline;
+    document.getElementById('c-avatar').textContent = bp.criador.nome.charAt(0);
+    document.getElementById('c-autora').textContent = bp.criador.nome;
+    document.getElementById('c-meta').textContent   = `${bp.criador.area} · ${bp.criador.anos_experiencia} anos de experiência`;
+
+    // Destino
+    document.getElementById('d-pub').textContent = bp.destino.publico;
+    document.getElementById('d-pa').textContent  = bp.destino.ponto_a;
+    document.getElementById('d-pb').textContent  = bp.destino.ponto_b;
+
+    // Identidade
+    document.getElementById('id-nome').textContent = bp.identidade.nome_oficial;
+    document.getElementById('id-tag').textContent  = bp.identidade.tagline;
+    document.getElementById('id-frase').textContent = `"${bp.identidade.frase_autoral}"`;
+    document.getElementById('id-forma').textContent = bp.identidade.forma_descricao;
+
+    const swDefs = [
+      {n:'Primária',  h:c.primaria},
+      {n:'Secundária',h:c.secundaria},
+      {n:'Acento',    h:c.acento}
+    ];
+    document.getElementById('id-sw').innerHTML = swDefs.map(s=>
+      `<div class="swatch"><div class="sw-color" style="background:${s.h}"></div><div class="sw-info"><div class="sw-name">${s.n}</div><div class="sw-hex">${s.h}</div></div></div>`
+    ).join('');
+
+    // Didática
+    const d = bp.didatica || {};
+    document.getElementById('did-ap').textContent = d.aproximar || '';
+    document.getElementById('did-co').textContent = d.conectar  || '';
+    document.getElementById('did-de').textContent = d.desejar   || '';
+
+    // Caminho — step cards
+    const sw = document.getElementById('steps-wrap');
+    (bp.caminho || []).forEach(s => {
+      sw.insertAdjacentHTML('beforeend', `
+        <div class="step-card">
+          <div class="step-hdr">
+            <div class="step-num">${s.ordem}</div>
+            <div><div class="step-title">${s.nome}</div><div class="step-sub">${s.descricao}</div></div>
+          </div>
+          <div class="step-body">
+            <div class="f-box f-fez"><div class="f-lbl">FEZ — trajetória pessoal</div><div class="f-txt">${s.fez}</div></div>
+            <div class="f-box f-faz"><div class="f-lbl">FAZ — processo atual</div><div class="f-txt">${s.faz}</div></div>
+            <div class="f-box f-faria"><div class="f-lbl">FARIA — versão ensinável</div><div class="f-txt">${s.faria}</div></div>
+          </div>
+          <div class="step-tool"><span class="tool-badge">◎ Ferramenta</span><span class="tool-nm">${s.ferramenta}</span></div>
+        </div>`);
+    });
+    document.getElementById('rota-res').textContent = bp.rota_resumo || '';
+
+    // Pitch
+    const p = bp.pitch || {};
+    document.getElementById('p-frase').textContent = `"${p.uma_frase}"`;
+    document.getElementById('p-ext').textContent   = p.problema_externo   || '';
+    document.getElementById('p-int').textContent   = p.problema_interno   || '';
+    document.getElementById('p-fil').textContent   = p.problema_filosofico|| '';
+    document.getElementById('p-quem').textContent  = p.quem       || '';
+    document.getElementById('p-sol').textContent   = p.solucao    || '';
+    document.getElementById('p-dif').textContent   = p.diferencial || '';
+    document.getElementById('p-res').textContent   = p.resultado  || '';
+
+    // Portfolio
+    const pg = document.getElementById('port-grid');
+    (bp.portfolio || []).forEach(prod => {
+      pg.insertAdjacentHTML('beforeend', `
+        <div class="port-card">
+          <div class="port-hdr"><div class="port-nivel">${prod.nivel}</div><div class="port-nome">${prod.nome}</div></div>
+          <div class="port-body"><div class="port-fmt">${prod.formato}</div><div class="port-desc">${prod.descricao}</div></div>
+          <div class="port-price">${prod.preco_faixa}</div>
+        </div>`);
+    });
+
+    // Arsenal
+    const a = bp.arsenal || {};
+    const fw = document.getElementById('frases-wrap');
+    (a.frases_autorais || []).forEach(f => {
+      fw.insertAdjacentHTML('beforeend', `<div class="pq"><blockquote>"${f}"</blockquote></div>`);
+    });
+
+    const ho = a.historia_origem || {};
+    const stages = [
+      {l:'A Situação', t:ho.situacao},
+      {l:'A Tentativa',t:ho.tentativa},
+      {l:'O Insight',  t:ho.insight},
+      {l:'O Método',   t:ho.metodo},
+      {l:'O Resultado',t:ho.resultado}
+    ];
+    const tl = document.getElementById('tl-wrap');
+    stages.filter(s=>s.t).forEach(s => {
+      tl.insertAdjacentHTML('beforeend', `
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-lbl">${s.l}</div>
+          <div class="tl-txt">${s.t}</div>
+        </div>`);
+    });
+
+    // Próximos
+    document.getElementById('mvp-txt').textContent   = a.mvp_30_dias    || '';
+    document.getElementById('cta-txt').textContent   = a.proximo_passo  || '';
+    document.getElementById('painel-txt').textContent = bp.painel_sintese || '';
+    document.getElementById('foot-txt').textContent  = `${bp.identidade.nome_oficial} · ${bp.criador.nome} · Blueprint gerado pelo Orquestrador de Método Proprietário`;
+  })();
+
+  // TOC active tracking
+  (function() {
+    const root  = document.getElementById('main-scroll');
+    const links = document.querySelectorAll('.toc-a');
+    const ids   = ['capa','destino','caminho','identidade','didatica','pitch','portfolio','arsenal','proximos'];
+
+    root.addEventListener('scroll', () => {
+      const scrollTop = root.scrollTop + 120;
+      let active = ids[0];
+      ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= scrollTop) active = id;
+      });
+      links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${active}`));
+    }, { passive: true });
+  })();
+  </script>
+</body>
+</html>
