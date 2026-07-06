@@ -1,19 +1,40 @@
 # Orquestrador de Método Proprietário
 
-Sistema multi-agente para criação de método proprietário com entrega em HTML navegável e PDF premium.
+> Sistema multi-agente que transforma o conhecimento de um especialista em um **método proprietário completo** — com nome, identidade visual, pitch, portfólio e blueprint navegável em HTML premium.
 
-Baseado na metodologia **"O Poder do Método"** de Mari Coelho © 2024, complementado por Expert Secrets (Brunson), StoryBrand (Miller), E-Myth (Gerber) e Pitch Anything (Klaff).
+Baseado na metodologia **"O Poder do Método"** de Mari Coelho, integrado com Expert Secrets (Brunson), StoryBrand (Miller), Pitch Anything (Klaff) e E-Myth (Gerber).
 
 ---
 
-## Visão Geral
+## Demo
 
-Um especialista entra numa conversa, responde perguntas, e recebe ao final:
+**[→ Ver exemplo ao vivo: Método ANCORA](./exemplo-v2.html)**
 
-- Um **HTML personalizado** com a identidade visual do método criado, navegável em 3 visões (Método / Pitch / Portfólio)
-- Um **PDF premium** de ~12 páginas gerado no browser — capa, índice, frameworks preenchidos, cores do método
+O arquivo [`exemplo-v2.html`](./exemplo-v2.html) é um blueprint completo gerado pelo sistema para Ana Beatriz Campos — especialista em Gestão Educacional com 12 anos de experiência.
 
-Não é um template. É um sistema que extrai o método que já existe dentro da pessoa e o organiza de forma que ninguém mais pode copiar — porque a Rota é a trajetória pessoal de quem viveu aquilo.
+![Blueprint Método ANCORA](https://via.placeholder.com/900x420/1B3A5C/FFFFFF?text=M%C3%A9todo+ANCORA+%E2%80%94+Blueprint+Completo)
+
+**O que o exemplo demonstra:**
+- Layout e-book de duas colunas com sidebar navegável
+- Framework DCR interativo (4 tabs clicáveis — cada etapa revela FEZ/FAZ/FARIA)
+- Identidade visual gerada automaticamente a partir do Blueprint JSON
+- Seção de créditos metodológicos
+- Painel dos Agentes (bastidores da construção — não aparece no PDF)
+- Export PDF via `window.print()` com `@media print` otimizado
+
+---
+
+## O que o sistema entrega
+
+Um especialista responde perguntas numa conversa. Ao final, recebe:
+
+| Entrega | Descrição |
+|---|---|
+| **Blueprint HTML** | Arquivo único autocontido, navegável, com identidade do método |
+| **Export PDF** | Impressão premium via browser — preserva cores, SVGs e tipografia |
+| **Painel dos Agentes** | Bastidores visíveis: deliberações dos 3 especialistas que construíram o método |
+
+Não é um template. É um sistema que extrai o método que já existe dentro da pessoa e o organiza em algo que **ninguém mais pode copiar** — porque a Rota é a trajetória pessoal de quem viveu aquilo.
 
 ---
 
@@ -26,8 +47,9 @@ FASE 1   Briefing Conversacional
            Gera Dossiê de Contexto em JSON
                     ↓
 FASE 2   Agente DCR  ← sequencial, bloqueante
-           Estrutura Destino + Caminho + Rota (3F's)
-           Todos os agentes da Fase 3 dependem deste output
+           Destino (Ponto A → Ponto B)
+           Caminho (3–5 etapas nomeadas)
+           Rota (FEZ / FAZ / FARIA por etapa)
                     ↓
 FASE 3   4 Subagentes em paralelo
          ┌──────────┬──────────┬──────────┬──────────┐
@@ -42,208 +64,165 @@ FASE 4   Painel de Especialistas — 3 personas em paralelo
            Deliberação visível — o usuário vê o painel
                     ↓
 FASE 5   Agente Blueprint
-           Lê todos os outputs + deliberação
+           Lê todos os outputs + deliberação do painel
            Gera Blueprint final em JSON estruturado
                     ↓
-FASE 6   HTML personalizado + PDF premium
-           3 visões navegáveis (Método / Pitch / Portfólio)
-           Accordion expansível por linha
-           Export PDF via pdfmake (client-side)
+FASE 6   HTML Premium
+           Layout e-book responsivo
+           Framework interativo (tabs FEZ/FAZ/FARIA)
+           Painel dos Agentes (oculto no PDF)
+           Export via window.print() com @media print
 ```
 
 ---
 
-## Subagentes — Detalhes
+## Subagentes
 
-### Fase 2 — Agente DCR (sequencial)
+### Fase 2 — Agente DCR (sequencial, bloqueante)
 
-| | |
+| Campo | Detalhe |
 |---|---|
-| **Arquivo** | `agents/dcr.md` |
-| **Recebe** | Dossiê de Contexto JSON + arquivos/fotos do briefing |
-| **Entrega** | Ponto A e Ponto B · Caminho: 3–5 passos nomeados · 3F's por passo (FEZ/FAZ/FARIA) · Framework Método Waze preenchido |
+| Arquivo | `agents/dcr.md` |
+| Recebe | Dossiê de Contexto JSON |
+| Entrega | Ponto A e B · 3–5 etapas nomeadas · FEZ/FAZ/FARIA por etapa · Ferramenta por etapa |
 
-Único agente sequencial. Bloqueante — os 4 paralelos da Fase 3 só rodam após seu output.
+### Fase 3 — Paralelos
 
----
-
-### Fase 3 — Agentes Paralelos
-
-Todos recebem Dossiê + output do Agente DCR simultaneamente.
-
-#### Agente Identidade
-| | |
-|---|---|
-| **Arquivo** | `agents/identidade.md` |
-| **Recebe** | Dossiê + DCR + área de atuação |
-| **Entrega** | 5 opções de nome proprietário · 3 taglines · Nome recomendado com razão · Forma visual (roda/funil/escada/mapa/matriz) · Paleta de 3 cores |
-
-Formatos de nome testados: sigla, metáfora, verbo+resultado, adjetivo+processo, nome próprio+método.
-
-#### Agente Didática
-| | |
-|---|---|
-| **Arquivo** | `agents/didatica.md` |
-| **Recebe** | Dossiê + DCR + perfil do público |
-| **Entrega** | Framework Teoria da Imaginação (Aproximar/Conectar/Desejar) · 1 ferramenta por passo · 3 erros comuns do especialista · Formato de aula por módulo |
-
-#### Agente Produto
-| | |
-|---|---|
-| **Arquivo** | `agents/produto.md` |
-| **Recebe** | Dossiê + DCR + formato preferido |
-| **Entrega** | Portfólio: entrada · core · premium · Pitch de 1 frase · Pitch completo 5 elementos · Score de precificação + faixa recomendada · Estrutura Curso ou Mentoria |
-
-#### Agente Arsenal
-| | |
-|---|---|
-| **Arquivo** | `agents/arsenal.md` |
-| **Recebe** | Dossiê + DCR + crença central do especialista |
-| **Entrega** | 3 frases autorais candidatas · História de origem estruturada · MVP para 30 dias · Checklist de validação do método |
-
----
+| Agente | Arquivo | Entrega |
+|---|---|---|
+| Identidade | `agents/identidade.md` | Nome proprietário · tagline · cores · forma visual |
+| Didática | `agents/didatica.md` | Teoria da Imaginação (Aproximar/Conectar/Desejar) · erros comuns |
+| Produto | `agents/produto.md` | Portfólio 3 níveis · pitch 1 frase · pitch 5 elementos · precificação |
+| Arsenal | `agents/arsenal.md` | Frases autorais · história de origem · MVP 30 dias |
 
 ### Fase 4 — Painel de Especialistas (paralelo)
 
-Três personas leem **todos** os outputs das Fases 2 e 3. Cada uma entrega um bloco de deliberação. O usuário vê o painel completo antes da síntese.
+Três personas leem **todos** os outputs das Fases 2 e 3 e deliberam simultaneamente.
 
 ```
 ━━ PAINEL DE ESPECIALISTAS ━━━━━━━━━━━━━━━━━━━━━━
 
-Strategist  (lente: Expert Secrets / Brunson)
+Strategist  (Expert Secrets / Brunson)
   ✓ ponto forte
   ⚠ ajuste recomendado
   → recomendação específica
 
-Storyteller (lente: StoryBrand / Miller)
+Storyteller (StoryBrand / Miller)
   ✓ ponto forte
   ⚠ ajuste recomendado
   → recomendação específica
 
-Educator    (lente: O Poder do Método / Coelho)
+Educator    (O Poder do Método / Coelho)
   ✓ ponto forte
   ⚠ ajuste recomendado
   → recomendação específica
 
 ━━ SÍNTESE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 [decisão — maioria decide em conflito]
-[ajustes prioritários antes do Blueprint]
 ```
-
-#### Critérios por persona
-
-**Strategist**
-- O nome cria categoria própria ou imita o que já existe?
-- O portfólio está na ordem de escala correta?
-- A faixa de preço é defensável vs. o resultado entregue?
-- O método tem potencial de multiplicação?
-
-**Storyteller**
-- O cliente é o herói ou o especialista é o herói?
-- O pitch nomeia os 3 níveis de dor (externo, interno, filosófico)?
-- O CTA é claro, urgente e sem ambiguidade?
-- A história de origem tem fracasso real?
-
-**Educator**
-- A Rota é genuína — não copiável por quem não viveu aquilo?
-- Os 3F's têm profundidade suficiente para ensinar?
-- A didática entrega transformação ou apenas informação?
-- O MVP é executável em 30 dias sem construir nada do zero?
-
----
 
 ### Fase 5 — Agente Blueprint
 
-| | |
-|---|---|
-| **Arquivo** | `agents/blueprint.md` |
-| **Recebe** | Todos os outputs das Fases 2–4 |
-| **Entrega** | Blueprint final em JSON estruturado (input do HTML generator) |
+Consolida todos os outputs em um JSON estruturado que alimenta o HTML generator.
 
 ```json
 {
-  "identidade": {
-    "nome_oficial": "",
-    "tagline": "",
-    "frase_autoral": "",
-    "cores": { "primaria": "#", "secundaria": "#", "acento": "#" },
-    "forma_visual": "roda|funil|escada|mapa|matriz"
-  },
+  "criador": { "nome": "", "area": "", "anos_experiencia": 0, "bio": "" },
   "destino": { "publico": "", "ponto_a": "", "ponto_b": "" },
+  "identidade": {
+    "nome_oficial": "", "sigla": "", "tagline": "", "frase_autoral": "",
+    "forma_visual": "escada|roda|funil|mapa|matriz",
+    "cores": { "primaria": "#", "secundaria": "#", "acento": "#" }
+  },
   "caminho": [
     { "ordem": 1, "nome": "", "descricao": "", "fez": "", "faz": "", "faria": "", "ferramenta": "" }
   ],
-  "rota_resumo": "",
+  "didatica": { "aproximar": "", "conectar": "", "desejar": "" },
   "pitch": {
-    "uma_frase": "",
-    "quem": "", "problema": "", "solucao": "", "diferencial": "", "resultado": ""
+    "uma_frase": "", "quem": "",
+    "problema_externo": "", "problema_interno": "", "problema_filosofico": "",
+    "solucao": "", "diferencial": "", "resultado": ""
   },
   "portfolio": [
-    { "nivel": "entrada|core|premium", "nome": "", "formato": "", "preco_faixa": "" }
+    { "nivel": "Entrada|Core|Premium", "nome": "", "formato": "", "descricao": "", "preco_faixa": "" }
   ],
   "arsenal": {
     "frases_autorais": [],
-    "historia_origem": "",
-    "mvp_30_dias": "",
-    "proximo_passo": ""
+    "historia_origem": { "situacao": "", "tentativa": "", "insight": "", "metodo": "", "resultado": "" },
+    "mvp_30_dias": "", "proximo_passo": ""
   },
-  "criador": { "nome": "", "area": "", "anos_experiencia": 0 }
+  "rota_resumo": "",
+  "painel_sintese": "",
+  "painel_agentes": {
+    "estrategista": { "nome": "", "avaliacao": "", "nota": "" },
+    "storyteller":  { "nome": "", "avaliacao": "", "nota": "" },
+    "educador":     { "nome": "", "avaliacao": "", "nota": "" }
+  }
 }
 ```
 
 ---
 
-## Fase 6 — HTML Personalizado
+## HTML Premium — Fase 6
 
-Arquivo único, sem dependências externas exceto pdfmake via CDN.
+Arquivo único, sem dependências externas além das Google Fonts.
 
-### 3 Visões Navegáveis
+### Layout
 
-| Visão | Conteúdo |
-|-------|----------|
-| **Método** | Framework DCR visual (SVG inline) · Accordion por passo com FEZ/FAZ/FARIA · Teoria da Imaginação · Frases autorais · Arsenal de ferramentas |
-| **Pitch** | Slides navegáveis (setas/teclado) · 5 slides: Quem/Dor/Caminho/Por que você/Oferta · Pitch de 1 frase em destaque |
-| **Portfólio** | Cards dos 3 produtos com preço · Score de precificação visual · Checklist MVP 30 dias interativo · Próximo passo concreto |
+| Área | Detalhe |
+|---|---|
+| Header | Nome do método · meta do criador · botão Export PDF |
+| Sidebar | 288px · TOC com 10 seções · nome do método em Audiowide · active tracking via scroll |
+| Main | Scroll independente · 10 seções navegáveis |
+
+### Seções do Blueprint
+
+| # | Seção | Conteúdo |
+|---|---|---|
+| — | Capa | Nome do método em display · tagline · avatar do criador |
+| 01 | Destino | Stat blocks · público-alvo · jornada A→B |
+| 02 | Caminho | SVG escada decorativo · framework interativo (4 tabs FEZ/FAZ/FARIA) |
+| 03 | Identidade | Nome · tagline · frase autoral · paleta de cores |
+| 04 | Didática | Teoria da Imaginação (Aproximar → Conectar → Desejar) |
+| 05 | Pitch | Frase de 1 linha · 3 níveis de problema · frame completo |
+| 06 | Portfólio | 3 produtos escalonados com nível, formato e faixa de preço |
+| 07 | Arsenal | Frases autorais · história de origem em timeline |
+| 08 | Próximos Passos | MVP 30 dias · primeira ação · síntese do painel |
+| Ref | Referências | Créditos das 6 metodologias base |
 
 ### Identidade Visual Automática
 
-As cores do Blueprint JSON são injetadas como CSS variables:
+As cores do Blueprint JSON são injetadas como CSS variables via JavaScript:
 
-```css
-:root {
-  --cor-primaria:   #1B2A4A;  /* vem do Blueprint */
-  --cor-secundaria: #C0392B;  /* vem do Blueprint */
-  --cor-acento:     #1A6B45;  /* vem do Blueprint */
-}
+```js
+document.documentElement.style.setProperty('--primaria',   cores.primaria);
+document.documentElement.style.setProperty('--secundaria', cores.secundaria);
+document.documentElement.style.setProperty('--acento',     cores.acento);
 ```
 
-Todas as seções, badges e destaques usam essas variáveis. Cada especialista recebe um HTML com a identidade visual do *próprio método* — não um template genérico.
+Cada blueprint recebe a identidade visual do próprio método — não um template genérico.
 
-### Accordion
+### Tipografia
 
-- **Digital:** `<details>/<summary>` nativo. Tudo inicia colapsado. Estado preservado ao navegar entre visões.
-- **Print/PDF:** `@media print` força `details[open]` em todos os elementos. Nenhum conteúdo fica oculto no documento impresso.
+| Família | Uso |
+|---|---|
+| **Audiowide** | Títulos de display · nome do método · capítulos · sidebar |
+| **Cormorant Garamond** | Pull quotes · frases autorais · frase da capa |
+| **Inter** | Corpo de texto · labels · UI |
 
----
+### Export PDF
 
-## PDF Premium
+Geração via `window.print()` com `@media print` otimizado:
 
-**Biblioteca:** pdfmake via CDN `cdnjs.cloudflare.com` — geração client-side, sem servidor.
+- `@page { size: A4; margin: 18mm 20mm }`
+- Framework interativo substituído por step cards expandidos
+- Sidebar e header ocultos
+- Painel dos Agentes oculto (`display: none !important`)
+- `print-color-adjust: exact` em todos os elementos
 
-### Estrutura do Documento (~12 páginas)
+### Painel dos Agentes
 
-| Página | Conteúdo |
-|--------|----------|
-| 1 | Capa — nome do método, autor, ano, cor primária de fundo, borda lateral acento |
-| 2 | Índice — 4 seções com número de página |
-| 3–5 | DCR — Destino, Caminho (tabela), 3F's por passo |
-| 6 | Identidade — nome, tagline, frases autorais, forma visual (SVG) |
-| 7 | Didática — Teoria da Imaginação, ferramentas por passo |
-| 8–9 | Pitch — 5 elementos + pitch de 1 frase em destaque tipográfico |
-| 10–11 | Portfólio — cards de produto, precificação, MVP |
-| 12 | Contracapa — créditos, atribuição Mari Coelho, próximo passo |
-
-Cada página tem header (nome do método + seção) e footer (nome do criador + número de página). As cores do método tingem headers, títulos e badges em todas as páginas.
+Botão flutuante `🤖 Ver Painel dos Agentes` abre um modal com os pareceres completos dos 3 especialistas — Estrategista, Storyteller e Educador. Visível apenas no browser, **nunca aparece no PDF**.
 
 ---
 
@@ -254,6 +233,8 @@ orquestrador-metodo/
 ├── README.md                         ← este arquivo
 ├── SPEC.md                           ← spec de arquitetura completa
 ├── SKILL.md                          ← orquestrador · entrada da skill
+├── exemplo-v2.html                   ← demo · Blueprint Método ANCORA
+├── exemplo.html                      ← versão inicial (referência)
 │
 ├── agents/
 │   ├── dcr.md                        ← fase 2 · sequencial · bloqueante
@@ -268,10 +249,10 @@ orquestrador-metodo/
 │
 ├── references/
 │   ├── frameworks-complementares.md  ← Brunson · Miller · Klaff · Gerber
-│   └── html-structure.md             ← guia das 3 visões do HTML
+│   └── html-structure.md             ← guia das seções do HTML
 │
 └── scripts/
-    └── pdf-template.js               ← pdfmake · layout premium 12 páginas
+    └── pdf-template.js               ← referência pdfmake (substituído por window.print)
 ```
 
 ---
@@ -279,36 +260,27 @@ orquestrador-metodo/
 ## Decisões Técnicas
 
 | Decisão | Escolha | Razão |
-|---------|---------|-------|
-| Geração de PDF | pdfmake via CDN | Client-side, sem servidor, tipografia profissional |
-| Accordion | `<details>/<summary>` nativo | Zero JS, funciona em qualquer browser |
-| Print CSS | `@media print` + `details[open]` | Força expansão total sem JS adicional |
-| Identidade visual | CSS variables do Blueprint JSON | Um ponto de controle, todo o HTML reflete |
-| Framework visual | SVG inline | Sem dependências externas, embutido no HTML e no PDF |
-| Blueprint | JSON estruturado | Interface limpa entre Blueprint agent e HTML generator |
-| Paralelismo | Fases 3 e 4 em paralelo | Agente DCR é o único bloqueante; demais rodam simultâneos |
+|---|---|---|
+| Export PDF | `window.print()` + `@media print` | Preserva SVGs, cores e tipografia sem dependência de biblioteca |
+| Framework interativo | Tabs JS com painel dinâmico | Mais limpo e confiável que SVG clicável |
+| Identidade visual | CSS variables injetadas via JS | Um ponto de controle — todo o HTML reflete o JSON |
+| Painel dos Agentes | Modal overlay com `display:none` no print | Bastidores visíveis para o criador, invisíveis no documento final |
+| Tipografia | Audiowide + Cormorant Garamond + Inter | Display de impacto + elegância serif + legibilidade UI |
+| Accordion / tabs | Estado gerenciado por JS simples | Sem framework, funciona em qualquer browser |
 
 ---
 
-## Pendências de Implementação
+## Referências Metodológicas
 
-- [ ] Escrever `SKILL.md` como orquestrador puro (briefing + dispatch)
-- [ ] Escrever `agents/dcr.md` com critérios de qualidade dos 3F's
-- [ ] Escrever `agents/identidade.md` com os 5 formatos de nome
-- [ ] Escrever `agents/didatica.md` com Teoria da Imaginação
-- [ ] Escrever `agents/produto.md` com pitch Klaff + matriz de precificação
-- [ ] Escrever `agents/arsenal.md` com estrutura de história de origem
-- [ ] Escrever os 3 arquivos de painel com critérios por persona
-- [ ] Escrever `agents/blueprint.md` com schema JSON de output
-- [ ] Criar `references/html-structure.md` com guia das 3 visões
-- [ ] Criar `scripts/pdf-template.js` com layout pdfmake
-- [ ] Testar com caso real antes de presentear a Mari Coelho
+| Obra | Autor | Lente no sistema |
+|---|---|---|
+| O Poder do Método | Mari Coelho | Framework DCR · Teoria da Imaginação · FEZ/FAZ/FARIA · Agente Educator |
+| Expert Secrets | Russell Brunson | Nome proprietário · história de origem · Agente Strategist |
+| Building a StoryBrand | Donald Miller | 3 níveis de problema · cliente como herói · Agente Storyteller |
+| Pitch Anything | Oren Klaff | Frame controls · pitch structure · Agente Produto |
+| The E-Myth Revisited | Michael Gerber | Portfólio escalonado · sistema de entrega |
+| The Lean Startup | Eric Ries | MVP 30 dias · validação antes de construção |
 
 ---
 
-## Créditos
-
-Baseado na metodologia **"O Poder do Método"** de Mari Coelho © 2024.
-Complementado por Expert Secrets (Brunson), StoryBrand (Miller), E-Myth (Gerber) e Pitch Anything (Klaff).
-
-Arquitetura e orquestração: ODDATA / Trium Mind Advisory — 2026.
+Arquitetura e orquestração: **ODDATA / Trium Mind Advisory** — 2026.
