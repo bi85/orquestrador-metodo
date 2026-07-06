@@ -8,19 +8,24 @@ Baseado na metodologia **"O Poder do Método"** de Mari Coelho, integrado com Ex
 
 ## Demo
 
-**[→ Ver exemplo ao vivo: Método ANCORA](./exemplo-v2.html)**
+**[→ Ver exemplo: Método ANCORA](./exemplo-v2.html)**
 
-O arquivo [`exemplo-v2.html`](./exemplo-v2.html) é um blueprint completo gerado pelo sistema para Ana Beatriz Campos — especialista em Gestão Educacional com 12 anos de experiência.
+Blueprint completo gerado pelo sistema para Ana Beatriz Campos — especialista em Gestão Educacional com 12 anos de experiência.
 
-![Blueprint Método ANCORA](https://via.placeholder.com/900x420/1B3A5C/FFFFFF?text=M%C3%A9todo+ANCORA+%E2%80%94+Blueprint+Completo)
+| | |
+|---|---|
+| ![Capa e sidebar navegável](./imagens/01.capa.png) | ![Framework interativo — tabs FEZ/FAZ/FARIA](./imagens/02.Caminho.png) |
+| **Capa** — nome do método em display, sidebar com TOC ativo | **Caminho** — framework interativo com 4 tabs clicáveis |
+| ![Painel dos Agentes — bastidores visíveis](./imagens/03.Avaliação%20dos%20Agentes.png) | ![Seção de Referências Metodológicas](./imagens/04.Referências.png) |
+| **Painel dos Agentes** — bastidores ocultos no PDF | **Referências** — créditos das 6 metodologias base |
 
 **O que o exemplo demonstra:**
-- Layout e-book de duas colunas com sidebar navegável
-- Framework DCR interativo (4 tabs clicáveis — cada etapa revela FEZ/FAZ/FARIA)
+- Layout e-book de duas colunas com sidebar navegável e TOC ativo por scroll
+- Framework DCR interativo — 4 tabs clicáveis, cada um revela FEZ/FAZ/FARIA
 - Identidade visual gerada automaticamente a partir do Blueprint JSON
-- Seção de créditos metodológicos
-- Painel dos Agentes (bastidores da construção — não aparece no PDF)
-- Export PDF via `window.print()` com `@media print` otimizado
+- Seção de Referências Metodológicas (Mari Coelho, Brunson, Miller, Klaff, Gerber, Ries)
+- Painel dos Agentes — bastidores visíveis para o criador, ocultos no PDF
+- Export PDF via `window.print()` com `@media print` otimizado para A4
 
 ---
 
@@ -234,7 +239,12 @@ orquestrador-metodo/
 ├── SPEC.md                           ← spec de arquitetura completa
 ├── SKILL.md                          ← orquestrador · entrada da skill
 ├── exemplo-v2.html                   ← demo · Blueprint Método ANCORA
-├── exemplo.html                      ← versão inicial (referência)
+│
+├── imagens/                          ← screenshots do exemplo
+│   ├── 01.capa.png
+│   ├── 02.Caminho.png
+│   ├── 03.Avaliação dos Agentes.png
+│   └── 04.Referências.png
 │
 ├── agents/
 │   ├── dcr.md                        ← fase 2 · sequencial · bloqueante
